@@ -1,5 +1,5 @@
 @import 'nib' // CSS3 extensions for Stylus: http://visionmedia.github.io/nib/
-
+@import url(http://fonts.googleapis.com/css?family=Actor);
 // variables!
 
 slide_width = 640px
@@ -7,7 +7,7 @@ slide_height = 480px
 slide_background = #eaeaea
 
 slide_transition_length = .6s
-slide_transition_easing = ease
+slide_transition_easing = ease-in-out
 slide_transition_rotate_y = 90deg
 // Safari bugs out on 3d transform-origins, so we have to fake it
 slide_transition_nudge_x = -100px
@@ -158,7 +158,7 @@ pre
 // content styles
 
 body
-  font-family: helvetica, arial, sans-serif
+  font-family: Actor, helvetica, arial, sans-serif
   font-size: 18px
   color: #404040
 
@@ -196,3 +196,51 @@ p
 a
   color: #0089f3
   text-decoration: none
+
+color_background = #ebe2ae // Crema
+color_light_text = #6fc794 // Verde pastel
+color_dark_text = darken(color_light_text, 60%)
+color_light_links = #506abf // Morado patel
+color_dark_links = #5c3c91 // Morado oscuro
+color_hightlight = #22f0ec // Cyan
+
+color_tint_white = rgba(255, 255, 255, 0.70deg)
+
+article
+  background-image url(img/DAZZET_LOGO.png)
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+section
+  ul
+    color: color_dark_text
+  &.planning 
+    ul > li
+      float left
+      display inline-block
+      width 49%
+      height 90px
+a
+  color: color_dark_links
+
+.bespoke-slide
+  background: color_tint_white
+  back
+
+article.agile-image
+  background-image: url(../img/agile.jpg)
+  background-size: cover
+article.scrum-image
+  background-image: url(../img/scrum_image.jpg)
+  background-size: cover
+article.dazzet-image
+  background-image: url(../img/DAZZET_LOGO.png)
+  background-size: cover
+article.manager-image
+  background-image: url(../img/project_manager.jpg)
+  background-size: cover
+article.agile-manifesto
+  background-image: url(../img/agile_manifesto.jpg)
+  background-size: cover
+  section
+    background none    
